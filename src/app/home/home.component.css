@@ -1,0 +1,185 @@
+.navbar-brand {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+.container{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, .5);   
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+
+}
+
+#navbar {
+  color: white;
+  padding-left: 40px;
+  font-size: 25px;
+}
+.btn{
+  color: white;
+  border-color: white;
+  &:hover{
+    background-color: white;
+    color: #3a2250;
+    
+  }
+}
+
+.list {
+  list-style-type: none;
+  color: white;
+  padding-left: 50px;
+  padding: 10px 3% 0px 0px;
+  font-size: 15px;
+  display: none;
+
+  @media (min-width: 640px) {
+    display: flex;
+  }
+
+  li {
+    margin-left: 50px;
+  }
+}
+
+a {
+  color: inherit;
+  margin-top: 5px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.h {
+  margin-top: 10px;
+
+}
+/* home page styling starts here */
+.image {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-image: url(https://img.freepik.com/free-vector/gradient-purple-striped-background_23-2149583760.jpg);
+  background-size: cover;
+  position: absolute;
+
+}
+
+.image-overlay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+
+}
+
+h1 {
+
+  margin-left: 23%;
+  font-size: 65px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.check {
+
+  margin-top: 10%;
+  margin-left: -30%;
+  width: 150px;
+}
+
+.head {
+  color: #3a2250;
+}
+.offer p{
+  text-align: center;
+  color: #3a2250;
+}
+/* card styling */
+.card {
+  position: relative;
+  box-shadow: 0 7px 10px rgba(0, 0, 0, .8);
+  transition: 0.5s ease-in-out ;
+  margin-top: 50px;
+  margin-left: 30px;
+
+}
+.card:hover{
+  transform: translateY(20px);
+}
+.card-image{
+  position: relative;
+}
+.image-overlayy{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: linear-gradient(to bottom, rgba(173,83,137,0.1), rgb(46, 13, 63));
+}
+.card:hover .image-overlayy{
+  opacity: 1;
+}
+.info{
+  position: absolute;
+  color: white;
+  margin-top: 150px;
+  opacity: 0;
+}
+
+.card:hover .info{
+  opacity: 1;
+}
+
+/* parallax styling */
+.parallax{
+  margin-top: 100px;
+  padding: 150px;
+  text-align: center;
+  background: url(https://www.chilliapple.co.uk/blog/app/uploads/2024/03/software-development-step-by-step-guide.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 70vh;
+  color: white;
+  letter-spacing: 3px;
+}
+.parallax p{
+   margin-top: 30px;
+}
+h3{
+
+  font-size: 80px;
+  color: white;
+}
+
+/* footer styling */
+footer{
+  width: 100%;
+  height: 30vh;
+  background-color: #3a2250;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  padding: 80px;
+}

@@ -1,0 +1,43 @@
+.navbar{
+    background-color: #3a2250;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index:2000;
+}
+#navbar{
+    color: white;
+    padding-left:20px;
+
+    font-size: 25px;
+  
+    
+}
+
+
+
+.list {
+    list-style-type: none;
+    margin-left: auto;
+    color: white;
+    padding: 10px 8% 0px 0px;
+    font-size: 15px;
+    display: none;
+    @media (min-width: 640px) {
+      display: flex;
+    }
+    li {
+      margin-left: 50px;
+    }
+  }
+  a {
+    color: inherit;
+    margin-top: 5px;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration:none;
+    }
+  }

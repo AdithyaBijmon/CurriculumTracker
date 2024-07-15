@@ -1,0 +1,47 @@
+<div class ="row">
+	<div class="col-md-6 mx-auto p-0">
+		<div class="card">
+
+			<form #SignupForm="ngForm" (ngSubmit)="signUp()">
+<div class="login-box">
+	<div class="login-snip">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" ><label for="tab-1" class="tab"></label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up" checked ><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-space">
+			
+			<div class="sign-up-form">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user"  name="username" [(ngModel)]="signup.username" [class.is-invalid]="username.invalid && username.touched" #username="ngModel" type="text" class="input" placeholder="Create your Username" required>
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" name="password" [(ngModel)]="signup.password" #password="ngModel"  [class.is-invalid]="password.invalid && password.touched" type="password" class="input" data-type="password" placeholder="Password"  #pw minlength="6" required>
+					
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Confirm Password</label>
+					<input id="pass" name="cpassword" [(ngModel)]="signup.cpassword" type="password" class="input" #cpassword="ngModel" data-type="password" placeholder="Repeat your password"  [ngClass]='cpasswordClass' #cpw
+					(keyup)="checkPasswords(pw.value, cpw.value)" required>
+					<div class="text-danger" *ngIf='!passwordsMatching && iscpasswordDirty'>
+						Passwords did not match
+					  </div>
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" name="email" [(ngModel)]="signup.email"  [class.is-invalid]="email.invalid && email.touched" type="text" #email="ngModel" class="input" placeholder="Enter your email address" required>
+				</div>
+				<div class="group">
+					<button type="submit" [disabled]="SignupForm.form.invalid" class="btn btn-primary mt-3 signup">Signup</button>
+				</div>
+				<div class="foot">
+					<label for="tab-1"><a routerLink="/faculty-login">Already Member?</a> </label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>   
+</form>
+</div>
+</div>
+</div>

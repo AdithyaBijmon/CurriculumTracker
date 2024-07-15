@@ -1,0 +1,55 @@
+<div mat-dialog-title>
+  <div class="row">
+  <h1>Requirement Form</h1>
+</div>
+</div>
+<form [formGroup]="curriculumForm"  (ngSubmit)="onFormSubmit()">
+
+<div mat-dialog-content class="content">
+
+  <div class="row col-md-12">
+  
+    <mat-form-field appearance="outline">
+      <mat-label>Name of requirement</mat-label>
+      <input matInput type="text" placeholder="Ex. MEAN Stack" formControlName="requirement">
+    </mat-form-field>
+    </div>
+    <div class="row second col-md-12">
+    <div class="row second_input col-md-6">
+    <mat-form-field appearance="outline">
+      <mat-label>Area where training required</mat-label>
+      <mat-select  name="area" formControlName="area">
+        <mat-option *ngFor="let val of area" [value]="val">{{val}}</mat-option>
+     
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row second_input col-md-6">
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select  name="category" formControlName="category" >
+        <mat-option *ngFor="let cat of category" [value]="cat">{{cat}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </div>
+  <div class="row col-md-12">
+    <mat-form-field appearance="outline">
+      <mat-label>Institution</mat-label>
+      <input matInput type="text" formControlName="institution">
+    </mat-form-field>
+  </div>
+  <div class="row col-md-12">
+    <mat-form-field appearance="outline">
+      <mat-label>Hours</mat-label>
+      <input matInput type="number" formControlName="hours">
+    </mat-form-field>
+  </div>
+
+</div>
+<div mat-dialog-actions class="action">
+  <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+  <button mat-raised-button color="primary"  type="submit">{{data ? 'Update':'Add'}}</button>
+
+</div>
+</form>
