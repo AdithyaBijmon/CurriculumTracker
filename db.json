@@ -1,0 +1,53 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "curriculum": [
+    {
+      "requirement": "mern stack",
+      "area": "FSD",
+      "category": "Academic",
+      "institution": "ict",
+      "hours": 3,
+      "id": "218a"
+    },
+    {
+      "requirement": "mern",
+      "area": "FSD",
+      "category": "Govt",
+      "institution": "ict academy",
+      "hours": 3,
+      "id": "a031"
+    },
+    {
+      "requirement": "mean",
+      "area": "DSA",
+      "category": "Academic",
+      "institution": "pgm college",
+      "hours": 2,
+      "id": "235d"
+    },
+    {
+      "id": "b81b",
+      "requirement": "mean",
+      "area": "FSD",
+      "category": "Academic",
+      "institution": "ict",
+      "hours": 3
+    }
+  ]
+}
